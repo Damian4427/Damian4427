@@ -1,0 +1,22 @@
+[
+    {
+      "id": 1,
+      "nombre": "Combo Actualizacion Pc Amd Ryzen 3 3200g Mother 16 Gb Ddr4",
+      "precio": "300000",
+      "imagen": "../img/Combo Actualizacion Pc Amd Ryzen 3 3200g Mother 16 Gb Ddr4.png"
+    },
+
+    {
+      "id": 2,
+      "nombre": "Microprocesador Intel i7 10700",
+      "precio": "200000",
+      "imagen": "../img/intel i7 10700.png"
+    },
+    
+    {
+      "id": 3,
+      "nombre": "Placa de Video MSI RX 5700XT 4GB",
+      "precio": "180000",
+      "imagen": "../img/rx 5700xt.png"
+    }
+  ]

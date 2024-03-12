@@ -1,0 +1,155 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+.container {
+  width: 90%; 
+  max-width: 1200px; 
+  margin: 0 auto; 
+  padding: 20px; 
+}
+
+
+header {
+  background-color: rgb(189, 211, 253);
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box; 
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #000;
+}
+
+
+.contacto {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.formulario {
+  border: 1px solid #ccc;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.campo {
+  margin-bottom: 10px;
+}
+
+.campo label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.campo input {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+}
+
+.botones .btn {
+  font-family: Arial, sans-serif; 
+  font-size: 16px; 
+  text-align: center; 
+  width: 200px; 
+  margin: 0 auto; 
+}
+
+#mensajeCompra {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #79f779;
+  display: none; 
+  max-width: 200px;
+}
+
+
+.carrito {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.titulo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabla th, .tabla td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+.total {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.boton {
+  background-color: #000;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 100px; 
+}
+
+.card {
+  display: flex;
+  flex-direction: column; 
+  width: 100%;
+}
+
+.card-image img {
+  max-width: 100%;
+  height: auto; 
+}
+
+.card-button {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  height: 50px; 
+  margin-top: auto;
+}
+
+
+@media screen and (max-width: 768px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px; 
+  }
+}
