@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', function () {
     formularioContacto.addEventListener('submit', function (event) {
         event.preventDefault();
 
-
         const inputs = formularioContacto.querySelectorAll('input, textarea');
         let camposVacios = false;
         inputs.forEach(function (input) {
@@ -17,9 +16,12 @@ document.addEventListener('DOMContentLoaded', function () {
         if (camposVacios) {
             alert('Por favor, completa todos los campos.');
         } else {
-
             mensajeConfirmacion.style.display = 'block';
             formularioContacto.reset();
+
+            setTimeout(function () {
+                mensajeConfirmacion.style.display = 'none';
+            }, 3000);
         }
     });
 });

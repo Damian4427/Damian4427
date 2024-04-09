@@ -6,58 +6,58 @@
     <title>SpaceStation Store</title>
     <link rel="icon" href="..\img\logo.png" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
     <link rel="stylesheet" href="../css\styles.css">
+</head>
 
-    </head>
+<body>
+    <header>
+        <div class="home-logo">
+            <a href="/Damian4427/index.html"><img src="../img/logo.png" alt="logo"></a>
+        </div>
 
-    <body>
-        <header>
-            <div class= "home-logo">
-                <a href="../index.html"><img src="..\img\logo.png" alt="logo"></a>
-             </div>
-            
-            <nav>
-                <a href="../view\catalogo.html" class="nav-link">Productos</a>
-                <a href="../view\contacto.html" class="nav-link">Contacto</a>
-                <a href="../view\carro de compra.html" class="nav-link">Carrito de compras</a>
-            </nav>
+        <nav>
+          <a href="../view/catalogo.html" class="nav-link">Productos</a>
+          <a href="../view/contacto.html" class="nav-link">Contacto</a>
+          <a href="../view/carro de compra.html" class="nav-link">Carrito de compras</a>
+        </nav>
 
-        </header>
-        <section class="zona1">
-            <div class="contacto">
-                <h1 class="titulo">Contacto</h1>
-            
-                <p class="texto">
-                  Si tienes alguna pregunta o comentario, no dudes en contactarnos. 
-                  Rellena el siguiente formulario y nos pondremos en contacto contigo lo antes posible.
-                </p>
-            
-                <div class="formulario">
-                  <form action="enviar.php" method="post">
+    </header>
+    <section class="zona1">
+        <div class="contacto">
+            <h1 class="titulo">Contacto</h1>
+
+            <p class="texto">
+                Si tienes alguna pregunta o comentario, no dudes en contactarnos.
+                Rellena el siguiente formulario y nos pondremos en contacto contigo lo antes posible.
+            </p>
+
+            <div class="formulario">
+                <form id="formularioContacto" action="enviar.php" method="post">
                     <div class="campo">
-                      <label for="nombre">Nombre:</label>
-                      <input type="text" id="nombre" name="nombre" required>
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
                     </div>
                     <div class="campo">
-                      <label for="correo">Correo electrónico:</label>
-                      <input type="email" id="correo" name="correo" required>
+                        <label for="correo">Correo electrónico:</label>
+                        <input type="email" id="correo" name="correo" required>
                     </div>
                     <div class="campo">
-                      <label for="mensaje">Mensaje:</label>
-                      <textarea id="mensaje" name="mensaje" required></textarea>
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" required></textarea>
                     </div>
                     <div class="campo">
-                      <button type="submit" class="boton">Enviar</button>
+                      <button type="submit" class="btn btn-primary" style="font-size: 15px; font-weight: bold; padding: 10px 20px; height: auto;">Enviar</button>
                     </div>
-                  </form>
-                </div>
-            
-                <div class="mensaje" style="display: none;">
-                  Mensaje enviado correctamente.
-                </div>
-              </div>
-                  
-        </section>
-        <script src="/js/contacto.js"></script>
-    </body>
+                </form>
+            </div>
+
+            <div id="mensajeConfirmacion" style="display: none;">
+                Mensaje enviado correctamente.
+            </div>
+        </div>
+
+    </section>
+    <script src="../js/contacto.js"></script>
+</body>

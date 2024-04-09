@@ -2,7 +2,7 @@ const URL_JSON = '../backend/productos.json';
 
 function procesarProductos(producto) {
     const cardElement = document.createElement('div');
-    cardElement.classList.add('card');
+    cardElement.classList.add('card-productos');
 
     cardElement.innerHTML = `
         <div class="card-image"><img src="${producto.imagen}" alt="${producto.nombre}"></div>
