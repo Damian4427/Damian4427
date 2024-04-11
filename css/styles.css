@@ -36,7 +36,16 @@ nav a {
 }
 
 nav a:hover {
-  text-decoration: underline;
+  color: #ffcc00; 
+  text-decoration: none; 
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+p {
+  font-family: 'Montserrat', sans-serif;
 }
 
 .section {
@@ -142,6 +151,11 @@ nav a:hover {
   margin-top: 20px;
 }
 
+.btn-group a.btn,
+.btn-group button.btn {
+    text-transform: none; 
+}
+
 .boton {
   background-color: #000;
   color: #fff;
@@ -175,11 +189,33 @@ nav a:hover {
 }
 
 .card-button {
-  display: flex;
+  display: unset;
   justify-content: center; 
   align-items: center; 
   height: 50px; 
   margin-top: auto;
+  flex-direction: column; 
+  align-items: center; 
+  gap: 10px; 
+}
+
+.card-button .button-add {
+  background-color: #000 !important;
+  color: #fff !important;
+  border: none !important;
+  cursor: pointer !important;
+  transition: background-color 0.3s, color 0.3s;
+  text-align: center; 
+  font-family: 'Montserrat', sans-serif; 
+  font-size: 14px; 
+  font-weight: bold; 
+  border-radius: 10px; 
+}
+
+.card-button .button.button-add:hover {
+  background-color: #ffcc00 !important;
+  color: #000 !important;
+  text-decoration: none !important;
 }
 
 #mensajeConfirmacion {
