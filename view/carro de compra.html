@@ -10,12 +10,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
     <link rel="stylesheet" href="../css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script defer src="../js/carrito.js"></script>
+    <script defer src="../js/checkout.js"></script>
+    <script src="https://sdk.mercadopago.com/js/v2"></script>
 </head>
 
 <body>
     <header>
         <div class="home-logo">
-            <a href="/Damian4427/index.html"><img src="../img/logo.png" alt="logo"></a>
+            <a href="../index.html"><img src="../img/logo.png" alt="logo"></a>
         </div>
 
         <nav>
@@ -50,6 +53,7 @@
             <div class="botones btn-group">
                 <a href="catalogo.html" class="btn btn-primary">Seguir comprando</a>
                 <button id="botonPagar" class="btn btn-success">Pagar</button>
+                <div id="wallet_container"></div>
             </div>
 
             <div id="mensajeCompra" class="alert alert-success fade show fixed-bottom mx-auto" role="alert">
@@ -58,8 +62,6 @@
         </div>
     </section>
 
-    <script defer src="../js/carrito.js"></script>
-    <script defer src="../js/checkout.js"></script>
 </body>
 
 </html>
