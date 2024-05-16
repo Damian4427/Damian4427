@@ -75,12 +75,11 @@ document.getElementById("botonPagar").addEventListener("click", async () => {
 
 
 const createCheckoutButton = (PreferenceId) => {
-  const bricksBuilder = mp.bricks();
 
   const renderComponent = async () => {
     if (window.checkoutButton) window.checkoutButton.unmount();
 
-    bricksBuilder().create("wallet", "wallet_container", {
+    mp.bricks().create("wallet", "wallet_container", {
       initialization: {
           preferenceId: PreferenceId,
       },

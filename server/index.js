@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import bodyParser from "body-parser";
+import * as productos from "../backend/productos.json" assert {type: "json"};
 // SDK de Mercado Pago
 import { MercadoPagoConfig, Preference } from "mercadopago";
 // Agrega credenciales
@@ -12,7 +12,6 @@ const app = express();
 const port = 3000;
 app.use(cors());
 app.use(express.json());
-app.use(bodyParser.json());
 
 app.get("/", (req, res) => {
   res.send("Soy el server :)");
@@ -21,18 +20,20 @@ app.get("/", (req, res) => {
 app.post("/create_preference", async (req, res) => {
   try {
     const { productos } = req.body;
-    
+
     const items = productos.map(producto => ({
-      title: producto.title,
-      quantity: Number (producto.quantity),
-      unit_price: Number (producto.price),
-      image: producto.image
+      title: producto.nombre,
+      quantity: Number (producto.cantidad),
+      unit_price: Number (producto.precio),
     }));
 
     
     const preference = new Preference(client);
-    
-    const result = await preference.create({ items });
+    const result = await preference.create({
+      body: {
+        items
+      }
+    });
 
     res.json({
       id: result.id
@@ -45,6 +46,11 @@ app.post("/create_preference", async (req, res) => {
   }
 });
 
+app.get("/productos", (req, res) => {
+  res.json({productos});
+})
+
 app.listen(port, () => {
   console.log(`El servidor esta corriendo en el puerto ${port}`);
 });
+
