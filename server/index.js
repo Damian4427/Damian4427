@@ -1,6 +1,5 @@
 import express from "express";
 import cors from "cors";
-import * as productos from "../backend/productos.json" assert {type: "json"};
 // SDK de Mercado Pago
 import { MercadoPagoConfig, Preference } from "mercadopago";
 // Agrega credenciales
@@ -33,7 +32,9 @@ app.post("/create_preference", async (req, res) => {
       body: {
         items
       }
+      
     });
+    
 
     res.json({
       id: result.id

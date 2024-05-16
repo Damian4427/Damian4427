@@ -18,5 +18,12 @@
     "nombre": "Placa de Video MSI RX 5700XT 4GB",
     "precio": "180",
     "imagen": "../img/rx 5700xt.png"
+  },
+
+  {
+    "id": 4,
+    "nombre": "Monitor LED Samsung 24 pulgadas",
+    "precio": "160",
+    "imagen": "../img/monitor.jpg"
   }
 ]

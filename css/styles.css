@@ -6,7 +6,11 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  background-image: url('../img/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #000000;
   color: #333;
   margin: 0;
   padding: 0;
@@ -61,21 +65,28 @@ p {
 }
 
 .zona1 {
-  background-color: #fff;
-  padding: 50px;
+  background-image: url('../img/background.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; 
+  margin-top: 80px; 
+  text-align: center;
+  color: #fff; 
 }
-
 
 .contacto {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5); 
+  color: white;
 }
 
 .formulario {
   border: 1px solid #ccc;
   padding: 20px;
-  background-color: #fff;
+  background-color: transparent; 
 }
 
 .campo {
@@ -85,12 +96,27 @@ p {
 .campo label {
   display: block;
   margin-bottom: 5px;
+  color: white; 
 }
 
 .campo input {
   width: 100%;
   padding: 5px;
   border: 1px solid #ccc;
+  background-color: rgba(255, 255, 255, 0.3); 
+  color: white; 
+}
+
+.campo textarea {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  background-color: rgba(255, 255, 255, 0.3); 
+  color: white; 
+}
+
+.campo textarea:focus {
+  background-color: rgba(255, 255, 255, 0.5); 
 }
 
 .botones .btn {
@@ -123,6 +149,8 @@ p {
   max-width: 960px; 
   margin: 0 auto; 
   padding: 20px;
+  padding-top: 250px;
+  padding-bottom: 250px;
 }
 
 .producto {
@@ -142,9 +170,11 @@ p {
 .tabla {
   width: 100%;
   border-collapse: collapse;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white; 
 }
 
-.producto th, .producto td {
+.tabla th, .tabla td {
   padding: 10px;
   border-bottom: 1px solid #ddd;
   text-align: left;
@@ -154,7 +184,9 @@ p {
   margin-top: 20px;
   font-weight: bold;
   font-size: 1.2em;
+  color: white; 
 }
+
 .botones {
   margin-top: 20px;
 }
@@ -176,21 +208,38 @@ p {
 }
 
 .container-productos {
- display: flex;
- flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
   gap: 6rem;
-  
+  justify-content: center; /* Centra los elementos horizontalmente */
+  align-items: center; /* Centra los elementos verticalmente */
+}
+
+.card-name{
+  color: #fff;
+}
+
+.card-price{
+  color: #fff;
 }
 
 .card-productos {
   display: flex;
-  flex-direction: column; 
-  min-height: 500px ;
-  gap: 1rem;
-  max-width: 400px;
+  flex-direction: column;
+  min-height: 500px;
   max-height: 600px;
-  justify-content: space-between;
-  padding: 2rem;
+  max-width: 400px;
+  padding: 7rem;
+  justify-content: center; /* Centra los elementos hijos verticalmente */
+  align-items: center; /* Centra los elementos hijos horizontalmente */
+}
+
+
+.card-productos > * {
+  display: flex;
+  align-items: center; /* Centra el contenido de los hijos verticalmente */
+  justify-content: center; /* Centra el contenido de los hijos horizontalmente */
+  flex-grow: 1; /* Permite que los elementos hijos crezcan igualmente */
 }
 
 .card-image img {
@@ -237,12 +286,11 @@ p {
 }
 
 #tablaCarrito.producto {
-  background-color: #ffffff;
-  color: #333;
+  background-color: rgba(255, 255, 255, 0.5); 
+  color: white; 
   width: 100%; 
   border-collapse: collapse; 
 }
-
 
 #tablaCarrito.producto td img {
   max-width: 100%; 
@@ -256,28 +304,17 @@ p {
   text-align: center; 
   vertical-align: middle; 
 }
+.align-right {
+  float: right;
+}
 
 button.svelte-1ruergu.svelte-1ruergu {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: var(--borderRadius);
-  height: 45px;
-  width: auto;
-  border: none;
-  cursor: pointer;
-  padding: 16px;
-  width: 70%;
-  height: 40px;
-  min-width: 200px;
-  overflow: hidden;
-  white-space: nowrap;
-  line-height: 20px;
-  font-family: 'sans serif';
-  font-size: 16px;
-  font-weight: 400;
-  position: absolute;
-  bottom: -10px;
+  position: relative;
+  width: 350px; /* Ajusta el ancho según sea necesario */
+  padding: 10px 20px; /* Ajusta el relleno interno según sea necesario */
+  bottom: 20px;
+  left: calc(60% - 160px); /* Calcula la mitad del ancho para centrar horizontalmente */
+  transform: translateX(0%);
 }
 
 @media screen and (max-width: 768px) {

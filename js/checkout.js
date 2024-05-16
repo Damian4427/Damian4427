@@ -89,3 +89,14 @@ const createCheckoutButton = (PreferenceId) => {
   renderComponent();
 };
 
+document.addEventListener('DOMContentLoaded', function() {
+  const botonEliminarCarrito = document.getElementById('botonEliminarCarrito');
+
+  botonEliminarCarrito.addEventListener('click', function() {
+      // Lógica para vaciar el carrito
+      localStorage.clear();
+      mostrarProductosEnCarrito(); 
+      // Mostrar un mensaje de confirmación al usuario
+      alert('El carrito ha sido vaciado.');
+  });
+});
